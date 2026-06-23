@@ -1,14 +1,13 @@
 import streamlit as st
-import streamlit.components.v1 as components
 
 # Page Configuration
 st.set_page_config(
-    page_title="Happy Birthday Brother",
+    page_title="Happy Birthday Brother 🎂",
     page_icon="🎂",
     layout="centered"
 )
 
-# Custom Styling
+# Custom CSS
 st.markdown("""
 <style>
 .big-title {
@@ -17,14 +16,18 @@ st.markdown("""
     font-size: 50px;
     font-weight: bold;
 }
+
 .message {
     text-align: center;
     font-size: 22px;
+    line-height: 1.8;
     padding: 20px;
 }
-.gift-box {
+
+.footer {
     text-align: center;
-    padding: 20px;
+    padding-top: 30px;
+    color: gray;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -32,51 +35,43 @@ st.markdown("""
 # Balloons
 st.balloons()
 
-# Header
-st.markdown('<p class="big-title">🎉 Happy Birthday Brother! 🎉</p>', unsafe_allow_html=True)
+# Title
+st.markdown(
+    '<p class="big-title">🎉 Happy Birthday Brother! 🎉</p>',
+    unsafe_allow_html=True
+)
 
-# Message
+# Birthday Message
 st.markdown("""
 <div class="message">
-Wishing you a day filled with happiness, success, and lots of unforgettable memories. ❤️<br><br>
+Wishing you a day filled with happiness, success, and unforgettable memories. ❤️<br><br>
 
-You have always been my biggest supporter, guide, and inspiration.<br>
-Today, I wanted to give you something special that I built with love. 🎁
+You have always been my biggest supporter, guide, and inspiration.<br><br>
+
+So today, I wanted to give you something special that I built with love. 🎁
 </div>
 """, unsafe_allow_html=True)
 
 st.divider()
 
 # Gift Section
-st.markdown('<div class="gift-box">', unsafe_allow_html=True)
+st.subheader("🎁 Your Special Birthday Gift")
 
-if st.button("🎁 Open Your Birthday Gift"):
-    
-    st.success("Surprise! I created a special portfolio website just for you.")
-    
-    portfolio_link = "https://balam-lovaraju-portfolio.onrender.com"
-    
-    st.markdown(
-        f"""
-        ### 🎉 Your Gift is Ready!
-        
-        Click below to explore:
-        
-        **🔗 [Visit Your Portfolio]({portfolio_link})**
-        """
-    )
+st.success("A surprise gift is waiting for you!")
 
-    st.balloons()
-
-st.markdown('</div>', unsafe_allow_html=True)
+# Portfolio Button
+st.link_button(
+    "🎁 Open Your Gift",
+    "https://balam-lovaraju-portfolio.onrender.com"
+)
 
 st.divider()
 
 st.markdown(
     """
-    <center>
-    <h3>Made with ❤️ by Your Loving Sister</h3>
-    </center>
+    <div class="footer">
+        <h3>Made with ❤️ by Your Loving Sister</h3>
+    </div>
     """,
     unsafe_allow_html=True
 )
