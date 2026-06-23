@@ -54,7 +54,7 @@ if st.button("🎁 Open Your Birthday Gift"):
     
     st.success("Surprise! I created a special portfolio website just for you.")
     
-    portfolio_link = "https://your-portfolio-link.com"
+    portfolio_link = "https://balam-lovaraju-portfolio.onrender.com"
     
     st.markdown(
         f"""
